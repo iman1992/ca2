@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+        <style>
+            p {
+                line-height:1.7;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class ="container">
+            
+            <div class="jumbotron">
+                <h1>CA2 - Documentation</h1>
+                <div id="author">  Iman Husseini</div>
+               
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-sm-10">
+                    <h2>REST API</h2>
+                    
+                    <p>We have our "CRUD" operations in the "RestService" class - getAllPersons, getPerson, createPerson, delete and edit.
+                       The "RestService" has access to the "Facade" class, which has a connection to the database. The RESTful API is just
+                       a simple collection of URIs, HTTP calls to those URIs and some JSON representations of resoursces, many of which contain
+                       relational links. Each resouse has its own address or URI - every thing the server can provide is exposed as a resource.
+                    </p><hr>
+                    
+                    <h5><strong>To insert (create) a new person in the system, we use:</strong></h5>
+                    <p><font color="red">POST</font> - <font color="blue">http://localhost:8080/CA2NewVersion/api/rest/add</font></p>
+                    <h5><strong>To read all persons in the system, we use:</strong></h5>
+                    <p><font color="red">GET</font> - <font color="blue">http://localhost:8080/CA2NewVersion/api/rest</font></p>
+                    <h5><strong>To read a person with id = 1, we use:</strong></h5>
+                    <p><font color="red">GET</font> - <font color="blue">http://localhost:8080/CA2NewVersion/api/rest/1</font></p>
+                    <h5><strong>To delete a person with id = 1, we use:</strong></h5>
+                    <p><font color="red">DELETE</font> - <font color="blue">http://localhost:8080/CA2NewVersion/api/rest/delete/1</font></p>
+                    <h5><strong>To edit a person with id = 1, we use:</strong></h5>
+                    <p><font color="red">PUT</font> - <font color="blue">http://localhost:8080/CA2NewVersion/api/rest/edit/1</font></p><hr>
+                </div>
+                
+                
+                <div class="col-sm-10">
+                    <h2>Facade Design Pattern</h2>
+                    <p>We have implemented the Facade Desing pattern in our system. The facade provides a unified interface to a set of interfaces in 
+                       a subsystem. The facade makes the subsystem easier to use, because of the defined higher-level interface. In our application the 
+                       Facade has a connection with the MySQL database. 
+                    </p><hr>
+                </div>
+                
+                <div class="col-sm-10">
+                    <h2>JSON Format</h2>
+                    <p>JSON (JavaScript Object Notation) is a data-interchange format. It is easy to read and write. It is easy for machines to parse and 
+                        generate. It is based on a subset of the Javascript Programming Language. JSON is a collection of name/value pairs. </p>
+                    
+                    <p>When using the "POST" method via the Postman application, you have to fill out some information: 
+                    </p>
+                    <p><strong>Examples Below</strong></p>
+                    <p>{
+                        "firstName": "Mike",
+                        "lastName": "Tyson",
+                        "email": "Tyson@email.dk",
+                        "street": "Vestergade nr 1",
+                        "zipCode": "2400",
+                        "city": "Copenhagen"
+                    }
+                    </p>
+                    <p>{
+                        "firstName": "Michael",
+                        "lastName": "Jordan",
+                        "email": "Jordan@email.dk",
+                        "street": "Florida street nr 2",
+                        "zipCode": "4356",
+                        "city": "Florida"
+                    }  
+                    </p>
+                    <p>{
+                        "firstName": "Spiderman",
+                        "lastName": "Jensen",
+                        "email": "Spiderman@email.dk",
+                        "street": "Jululu gade nr 1",
+                        "zipCode": "2600",
+                        "city": "Copenhagen"
+                    }
+                    </p>
+                </div>
+                
+                                
+                <div class="col-sm-10">
+                    <h2>Test</h2>
+                    <p>Test of Facade Class - Screenshot of test, is attached to the project file</p>
+                    <ul>
+                        <li><p>Create Person</p></li>
+                        <li><p>Delete Person</p></li>
+                        <li><p>Edit Person</p></li>
+                    </ul><hr>
+                </div>
+                
+               
+                
+            </div>
+            
+        </div>
+        
+        
+        
+    </body>
+</html>
